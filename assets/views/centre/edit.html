@@ -53,10 +53,10 @@
             event.preventDefault();
             if (confirm("Are you sure you want to delete this item?")) {
                 var xhr = new XMLHttpRequest();
-                xhr.open("DELETE", "/movies/{{ item.id }}", true);
+                xhr.open("DELETE", "/centres/{{ item.id }}", true);
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
-                        window.location.href = "/movies";
+                        window.location.href = "/centres";
                     }
                 };
                 xhr.send();
