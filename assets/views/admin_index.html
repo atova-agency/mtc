@@ -1,0 +1,215 @@
+{% extends "admin_base.html" %}
+{% block title %}MTC - Admin{% endblock title %}
+
+{% block sidenav %}{{ super() }}{% endblock sidenav %}
+{% block content %}
+                            <div class="row text-center pad-top">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="#" >
+ <i class="fa fa-circle-o-notch fa-5x"></i>
+                      <h4>Carrénage</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div> 
+                 
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/admin/search?terms=Filtre&category=" >
+ <i class="fa fa-envelope-o fa-5x"></i>
+                      <h4>Filtration</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/admin/search?terms=Moteur&category=" >
+ <i class="fa fa-lightbulb-o fa-5x"></i>
+                      <h4>Moteur</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/admin/search?terms=frein&category=famille" >
+ <i class="fa fa-users fa-5x"></i>
+                      <h4>Freinage</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/admin/search?terms=Eclairage&category=famille" >
+ <i class="fa fa-key fa-5x"></i>
+                      <h4>Electricité </h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/admin/search?terms=Pont&category=famille" >
+ <i class="fa fa-comments-o fa-5x"></i>
+                      <h4>Pont</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+              </div>
+                 <!-- /. ROW  --> 
+                <div class="row text-center pad-top">
+                 
+                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="#" >
+ <i class="fa fa-clipboard fa-5x"></i>
+                      <h4>Outillage</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="blank.html" >
+ <i class="fa fa-gear fa-5x"></i>
+                      <h4>Liquide</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="blank.html" >
+ <i class="fa fa-wechat fa-5x"></i>
+                      <h4>Boites de vitesse</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="blank.html" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Pneumatique </h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  
+              </div>   
+<hr />
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/famille_mtcs/new" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Créer famille mtcs</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/famille_mtcs?page=1&page_size=5" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier famille mtcs</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                     
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/contacts" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier Contact</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                     
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/letypes" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier Type</h4>
+                      </a>
+                      </div>
+                                          
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/depots" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier depots</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/centres" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier centres</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/familles" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier familles</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/marques" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier marques</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="/marque_oems" >
+ <i class="fa fa-bell-o fa-5x"></i>
+                      <h4>Modifier marques oem</h4>
+                      </a>
+                      </div>
+                     
+                  </div>
+
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>       
+ <!-- ========================= DEBUG del me  -->
+<div id="debug">
+<h3>CHANGE ME</h3>
+</div>
+{% endblock content %}
+{% block js %}
+<script>
+let a = document.getElementById("debug");
+a.innerHTML = getCookieByName("{{ cookie }}");
+</script>
+{% endblock js %}
+
+

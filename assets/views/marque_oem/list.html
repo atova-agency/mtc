@@ -1,0 +1,24 @@
+{% extends "admin_base.html" %}
+
+{% block title %}
+List marque_2
+{% endblock title %}
+{% block sidenav %}{{ super() }}{% endblock sidenav %}
+{% block content %}
+<h1>marque_2</h1>
+<div class="mb-10">
+    {% for item in items %}
+    <div class="mb-5">
+            <div>
+                <label><b>{{"marque_2" | capitalize }}:</b> {{item.marque_oem}}</label>
+                </div>
+            <a href="/marque_oems/{{ item.id }}/edit">Edit</a>
+            <a href="/marque_oems/{{ item.id }}">View</a>
+        </div>
+    {% endfor %}
+
+    <br />
+    <br />
+    <a href="/marque_oems/new">New marque_2</a>
+</div>
+{% endblock content %}

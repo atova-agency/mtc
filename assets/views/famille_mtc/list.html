@@ -1,0 +1,82 @@
+{% extends "admin_base.html" %}
+
+{% block title %}
+List famille_mtc
+{% endblock title %}
+{% block sidenav %}{{ super() }}{% endblock sidenav %}
+{% block content %}
+
+<div class="row">
+                                            {% if info.page > 1 %}
+                                            <a href="/famille_mtcs?page={{ info.page - 1 }}&page_size=5">prev page</a> &nbsp;| &nbsp;
+                                            {% endif %}
+                                            <a href="/famille_mtcs?page={% if info.page < info.total_pages %}{{ info.page + 1 }}{% else %}{{ 1 }}{% endif %}&page_size=5">next page</a>
+                                            <p>
+                                                page: <em>{{ info.page }}</em> / {{ info.total_pages }}
+                                                <!-- page_size: {{ info.page_size }} -->
+                                            </p>
+                                    </div>
+                                    <div class="row">
+                                        <h1>famille_mtc</h1>
+                                        <div class="mb-10">
+                                    {% for item in items %}
+    <div class="mb-5">
+            <div>
+                <label><b>{{"code" | capitalize }}:</b> {{item.code}}</label>
+                </div>
+            <div>
+                <label><b>{{"designation" | capitalize }}:</b> {{item.designation}}</label>
+                </div>
+            <div>
+                <label><b>{{"pix" | capitalize }}:</b> {{item.pix}}</label>
+                </div>
+            <div>
+                <label><b>{{"letype" | capitalize }}:</b> {{item.letype}}</label>
+                </div>
+            <div>
+                <label><b>{{"marque" | capitalize }}:</b> {{item.marque}}</label>
+                </div>
+            <div>
+                <label><b>{{"prix_ttc" | capitalize }}:</b> {{item.prix_ttc}}</label>
+                </div>
+            <div>
+                <label><b>{{"famille" | capitalize }}:</b> {{item.famille}}</label>
+                </div>
+            <div>
+                <label><b>{{"depot" | capitalize }}:</b> {{item.depot}}</label>
+                </div>
+            <div>
+                <label><b>{{"centre" | capitalize }}:</b> {{item.centre}}</label>
+                </div>
+            <div>
+                <label><b>{{"reference" | capitalize }}:</b> {{item.reference}}</label>
+                </div>
+            <div>
+                <label><b>{{"oem" | capitalize }}:</b> {{item.oem}}</label>
+                </div>
+            <div>
+                <label><b>{{"marque_oem" | capitalize }}:</b> {{item.marque_oem}}</label>
+                </div>
+            <div>
+                <label><b>{{"keywords" | capitalize }}:</b> {{item.keywords}}</label>
+                </div>
+            <a href="/famille_mtcs/{{ item.id }}/edit">Edit</a>
+            <a href="/famille_mtcs/{{ item.id }}">View</a>
+        </div>
+    {% endfor %}
+
+    <br />
+    <br />
+    <a href="/famille_mtcs/new">New famille_mtc</a>
+<div class="row">
+    {% if info.page > 1 %}
+        <a href="/famille_mtcs?page={{ info.page - 1 }}&page_size=5">prev page</a> &nbsp;| &nbsp;
+    {% endif %}
+    <a href="/famille_mtcs?page={% if info.page < info.total_pages %}{{ info.page + 1 }}{% else %}{{ 1 }}{% endif %}&page_size=5">next page</a>
+    <p>
+        page: <em>{{ info.page }}</em> / {{ info.total_pages }}
+    <!-- page_size: {{ info.page_size }} -->
+    </p>
+</div><!-- /. ROW  -->    
+
+{% endblock content %}

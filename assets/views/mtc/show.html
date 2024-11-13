@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}MTC - detail{% endblock title %}
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+{% block content %}
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3 search-result">
+
+                <h1>View famille_mtc: {{ item.id }}</h1>
+                <div class="mb-10">
+                        <div>
+                            <label><b>{{"code" | capitalize }}:</b> {{item.code}}</label>
+                        </div>
+                        <div>
+                            <label><b>{{"designation" | capitalize }}:</b> {{item.designation}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"pix" | capitalize }}:</b> {{item.pix}}</label>
+                            <img alt="{{item.pix}}" width="200px" src={{item.pix}}>
+                            </div>
+                        <div>
+                            <label><b>{{"type" | capitalize }}:</b> {{item.letype_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"marque" | capitalize }}:</b> {{item.marque_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"prix_ttc" | capitalize }}:</b> {{item.prix_ttc}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"famille" | capitalize }}:</b> {{item.famille_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"depot" | capitalize }}:</b> {{item.depot_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"centre" | capitalize }}:</b> {{item.centre_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"reference" | capitalize }}:</b> {{item.reference}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"oem" | capitalize }}:</b> {{item.oem}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"marque_oem" | capitalize }}:</b> {{item.marque_oem_id}}</label>
+                            </div>
+                        <div>
+                            <label><b>{{"keywords" | capitalize }}:</b> {{item.keywords}}</label>
+                            </div>
+                        <br />
+                        <a href="/list">Retour aux produits famille mtcs</a><br/>
+                        <a href="/">Retour index Mtc</a>
+                </div>
+
+</div></div>
+{% endblock content %}
