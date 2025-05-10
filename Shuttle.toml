@@ -1,0 +1,11 @@
+[deploy]
+include = [
+    "config/production.yaml",
+    "assets/*",
+]
+
+[build]
+assets = [
+    "config/production.yaml",
+    "assets/*",
+]

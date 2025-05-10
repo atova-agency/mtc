@@ -4,6 +4,8 @@ title: dev log
 
 <main>
 NOTE: using loco 0.15.0,  cargo-shuttle.0.53.0,  postgres:16
+Created project 'mtc' with id proj_01JTXCJ4TXDNBF4VYHTTCP7Y06
+https://mtc-q7on.shuttle.app
 
 ---
 
