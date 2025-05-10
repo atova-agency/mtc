@@ -15,7 +15,15 @@ use std::path::Path;
 
 #[allow(unused_imports)]
 use crate::{
-    controllers, initializers, models::_entities::users, tasks, workers::downloader::DownloadWorker,
+    controllers, initializers, 
+    models::_entities::{ 
+            centres, contacts, 
+            depots, famille_mtcs, 
+            familles, letypes, 
+            marque_oems, marques,
+            users}, 
+    tasks, 
+    workers::downloader::DownloadWorker,
 };
 
 pub struct App;
@@ -59,7 +67,10 @@ impl Hooks for App {
             .add_route(controllers::famille::routes())
             .add_route(controllers::marque::routes())
             .add_route(controllers::letype::routes())
+//
             .add_route(controllers::frontend::routes())
+//            .add_route(controllers::search::routes())
+//            .add_route(controllers::admin::routes())
 //
             .add_route(controllers::auth::routes())
     }
@@ -79,6 +90,28 @@ impl Hooks for App {
     async fn seed(ctx: &AppContext, base: &Path) -> Result<()> {
         db::seed::<users::ActiveModel>(&ctx.db, &base.join("users.yaml").display().to_string())
             .await?;
+//
+        db::seed::<letypes::ActiveModel>(&ctx.db, &base.join("letypes.yaml").display().to_string())
+            .await?;
+        db::seed::<marques::ActiveModel>(&ctx.db, &base.join("marques.yaml").display().to_string())
+            .await?;
+        db::seed::<familles::ActiveModel>(&ctx.db, &base.join("familles.yaml").display().to_string())
+            .await?;
+        db::seed::<depots::ActiveModel>(&ctx.db, &base.join("depots.yaml").display().to_string())
+            .await?;
+        db::seed::<centres::ActiveModel>(&ctx.db, &base.join("centres.yaml").display().to_string())
+            .await?;
+        db::seed::<marque_oems::ActiveModel>(&ctx.db,
+            &base.join("marque_oems.yaml").display().to_string(),
+        )
+        .await?;
+        db::seed::<contacts::ActiveModel>(&ctx.db, &base.join("contacts.yaml").display().to_string())
+            .await?;
+        db::seed::<famille_mtcs::ActiveModel>(&ctx.db,
+            &base.join("famille_mtcs.yaml").display().to_string(),
+        )
+        .await?;
+        //
         Ok(())
     }
 }
