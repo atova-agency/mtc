@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+View contact: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View contact: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"name" | capitalize }}:</b> {{item.name}}</label>
+    </div>
+<div>
+    <label><b>{{"phone" | capitalize }}:</b> {{item.phone}}</label>
+    </div>
+<div>
+    <label><b>{{"email" | capitalize }}:</b> {{item.email}}</label>
+    </div>
+<br />
+<a href="/contacts">Back to contacts</a>
+</div>
+{% endblock content %}

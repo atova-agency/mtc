@@ -1,2 +1,10 @@
 pub mod _entities;
 pub mod users;
+pub mod letypes;
+pub mod marques;
+pub mod familles;
+pub mod depots;
+pub mod centres;
+pub mod marque_oems;
+pub mod contacts;
+pub mod famille_mtcs;

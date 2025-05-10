@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+View famille_mtc: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View famille_mtc: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"code" | capitalize }}:</b> {{item.code}}</label>
+    </div>
+<div>
+    <label><b>{{"designation" | capitalize }}:</b> {{item.designation}}</label>
+    </div>
+<div>
+    <label><b>{{"pix" | capitalize }}:</b> {{item.pix}}</label>
+    </div>
+<div>
+    <label><b>{{"prix_ttc" | capitalize }}:</b> {{item.prix_ttc}}</label>
+    </div>
+<div>
+    <label><b>{{"reference" | capitalize }}:</b> {{item.reference}}</label>
+    </div>
+<div>
+    <label><b>{{"oem" | capitalize }}:</b> {{item.oem}}</label>
+    </div>
+<div>
+    <label><b>{{"keywords" | capitalize }}:</b> {{item.keywords}}</label>
+    </div>
+<br />
+<a href="/famille_mtcs">Back to famille_mtcs</a>
+</div>
+{% endblock content %}

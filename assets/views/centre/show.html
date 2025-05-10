@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+View centre: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View centre: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"centre" | capitalize }}:</b> {{item.centre}}</label>
+    </div>
+<br />
+<a href="/centres">Back to centres</a>
+</div>
+{% endblock content %}

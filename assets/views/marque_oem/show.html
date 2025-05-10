@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+View marque_oem: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View marque_oem: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"marque_oem" | capitalize }}:</b> {{item.marque_oem}}</label>
+    </div>
+<br />
+<a href="/marque_oems">Back to marque_oems</a>
+</div>
+{% endblock content %}

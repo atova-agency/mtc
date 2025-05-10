@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+View famille: {{ item.id }}
+{% endblock title %}
+
+{% block page_title %}
+View famille: {{ item.id }}
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="mb-10">
+    <div>
+    <label><b>{{"famille" | capitalize }}:</b> {{item.famille}}</label>
+    </div>
+<br />
+<a href="/familles">Back to familles</a>
+</div>
+{% endblock content %}

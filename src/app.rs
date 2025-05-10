@@ -51,6 +51,14 @@ impl Hooks for App {
 
     fn routes(_ctx: &AppContext) -> AppRoutes {
         AppRoutes::with_default_routes() // controller routes below
+            .add_route(controllers::famille_mtc::routes())
+            .add_route(controllers::contact::routes())
+            .add_route(controllers::marque_oem::routes())
+            .add_route(controllers::centre::routes())
+            .add_route(controllers::depot::routes())
+            .add_route(controllers::famille::routes())
+            .add_route(controllers::marque::routes())
+            .add_route(controllers::letype::routes())
             .add_route(controllers::frontend::routes())
 //
             .add_route(controllers::auth::routes())
