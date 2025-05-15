@@ -70,8 +70,8 @@ mailer:
 
 # Database Configuration
 database:
-  # Database connection URI
-  uri: {{ get_env(name="DATABASE_URL", default="postgres://loco:loco@localhost:5432/mtc_development") }}
+  # Database connection URI # postgres://loco:loco@localhost:5432/mtc_development
+  uri: {{ get_env(name="DATABASE_URL", default="postgres://postgres:postgres@localhost:16182/mtc") }}
   # When enabled, the sql query will be logged.
   enable_logging: false
   # Set the timeout duration when acquiring a connection.
