@@ -2,21 +2,6 @@
 {% block title %}MTC - pièces détachés pour camion{% endblock title %}
 {% block head %}
     {{ super() }}
-        <!-- Libraries to replace or unify under Tailwindcss -->
-<!-- 
-        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
--->
-        <!-- Template Stylesheet>
-        <link href="/static/css/landing_style.css" rel="stylesheet" -->
-<style>
-    .carousel { position: relative; width: 100%; }
-    .carousel-inner { position: relative; width: 100%; height: 300px; }
-    .carousel-item { position: absolute; width: 100%; transition: transform 0.5s ease; }
-    .carousel-item img { width: 100%; height: auto; }
-    .carousel-prev, .carousel-next { cursor: pointer; font-size: 2rem; }
-</style>
 {% endblock head %}
 {% block content %}
      <!-- About Start -->
@@ -30,156 +15,9 @@
     </p>
     <h4 class="uppercase bg-red-500 text-white text-xl p-4">6/6 Support Téléphonique</h4>
   </div><!-- basis-64  -->
-  <div class="grow p-4"><img class="truck-left h-auto ms-auto" src="/static/img/MTC-charte-Lst2.png" alt="">
-  </div>
-</div>
-    <!-- About End -->
-
-{#
-    <!-- Slider start -->
-    <div class="header-carousel">
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="/static/img/truck-MTC-slider-1.jpg" class="img-fluid w-100" alt="First slide">
-                    <div class="carousel-caption">
-                        <div class="container py-4">
-                            <div class="row g-5">
-                                <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                    <div class="bg-secondary rounded p-5">
-                                        <h4 class="text-white mb-4">Rechercher vos pièces détachées</h4>
-                                        <form action="/search">
-<input type="search" name="terms" id="search_terms" placeholder="Choisir terme" />
-                                                            <div class="row g-3">
-                                                                <div class="col-12">
-                                                                    <select name="category" class="form-select" aria-label="Default select example">
-                                                                        <option selected="designation">Sélectionnez la categorie</option>
-
-                                                                        <option value="code">Code</option>
-                                                                        <option value="designation">Désignation</option>
-                                                                        <option value="letype">Type</option>
-                                                                        <option value="marque">Marque</option>
-                                                                        <option value="famille">Famille</option>
-                                                                        <option value="depot">Depot</option>
-                                                                        <option value="centre">Centre</option>
-                                                                        <option value="reference">Référence</option>
-                                                                        <option value="oem">OEM</option>
-                                                                        <option value="marque_oem">Marque_oem</option>
-                                                                    </select>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button class="btn btn-light w-100 py-2" type="submit" value="recherchez">Recherchez</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
-                                    <div class="text-start">
-                                        <h1 class="display-5 text-white">Trouvez vos pièces détachées pour camion </h1>
-                                        <p>Spécialiste en pièces détachés Poids Lourds<p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/static/img/truck-MTC-slider-2.jpg" class="img-fluid w-100" alt="First slide">
-                    <div class="carousel-caption">
-                        <div class="container py-4">
-                            <div class="row g-5">
-                                <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                    <div class="bg-secondary rounded p-5">
-                                        <h4 class="text-white mb-4">Rechercher vos pièces détachées</h4>
-                                        <form action="/search">
-<input type="search" name="terms" id="search_terms" placeholder="Choisir terme" />
-                                                            <div class="row g-3">
-                                                                <div class="col-12">
-                                                                    <select name="category" class="form-select" aria-label="Default select example">
-                                                                        <option selected="designation">Sélectionnez la categorie</option>
-
-                                                                        <option value="code">Code</option>
-                                                                        <option value="designation">Désignation</option>
-                                                                        <option value="letype">Type</option>
-                                                                        <option value="marque">Marque</option>
-                                                                        <option value="famille">Famille</option>
-                                                                        <option value="depot">Depot</option>
-                                                                        <option value="centre">Centre</option>
-                                                                        <option value="reference">Référence</option>
-                                                                        <option value="oem">OEM</option>
-                                                                        <option value="marque_oem">Marque_oem</option>
-                                                                    </select>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button class="btn btn-light w-100 py-2">Recherchez</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
-                                    <div class="text-start">
-                                        <h1 class="display-5 text-white">Trouvez vos pièces détachées pour camion </h1>
-                                        <p>Faites-vous plaisir à Antananarivo</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slider End -->
-
-
-<hr/>
-#}
-
-
-    <!-- Slider start -->
-{# https://tailkits.com/blog/building-responsive-carousels-with-tailwind-css-examples/ #}
-
-<div class="carousel relative overflow-hidden">
-    <div class="carousel-inner relative w-full overflow-hidden">
-      <div class="carousel-item active absolute w-full">
-        <img src="/static/img/truck-MTC-slider-1.jpg" height="500px" class="block h-full max-h-none" alt="Slide 1" />
-      </div>
-      <div class="carousel-item absolute w-full">
-        <img src="/static/img/truck-MTC-slider-2.jpg" height="500px" class="block w-full h-full" alt="Slide 2" />
-      </div>
-      <!-- Add more slides as needed -->
-    </div>
-    <!-- Carousel Controls ->
-    <button class="carousel-prev absolute top-1/2 left-0 transform -translate-y-1/2">
-      &lt;
-    </button>
-    <button class="carousel-next absolute top-1/2 right-0 transform -translate-y-1/2">
-      &gt;
-    </button>
-    -->
-  <button class="carousel-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full">
-    <svg xmlns="<http://www.w3.org/2000/svg>" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
-  <button class="carousel-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full">
-    <svg xmlns="<http://www.w3.org/2000/svg>" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-
-<div class="carousel-indicators flex justify-center mt-4">
-  <button class="indicator w-3 h-3 bg-gray-400 rounded-full mx-1" data-slide-to="0"></button>
-  <button class="indicator w-3 h-3 bg-gray-400 rounded-full mx-1" data-slide-to="1"></button>
-  <!-- Add more indicators as needed -->
-</div>
-
+  <div class="grow p-4">
+  <!-- img class="truck-left h-auto ms-auto" src="/static/img/MTC-charte-Lst2.png" alt=""-->
+<!-- SEARCH start -->
 <div class="bg-[#1f2e4e] rounded content-center p-5 w-md">
     <h4 class="text-white mb-4">Rechercher vos pièces détachées</h4>
     <form action="/search">
@@ -206,9 +44,13 @@
             </div>
         </div>
     </form>
-</div>
+</div><!-- SEARCH End -->
 
-</div>    <!-- Slider End -->
+  </div>
+</div>
+    <!-- About End -->
+
+
 
      <!-- Services Start -->
             <h1 class="text-xl uppercase text-white content-center mb-5">Nos catégories</h1>
@@ -368,6 +210,7 @@
     <!-- Services End -->
     <!-- debut section resultat de recherche --> 
       <!-- Vendor Start -->
+{#
 <style>
 .marquee__content {
   animation: scroll 45s linear infinite;
@@ -430,9 +273,10 @@
     <li><img class="w-7xl" src="/static/img/Caterpillar-Logo.png" alt=""></li>
   </ul>
 </div>
+#}
     <!-- Vendor End -->
             <!-- contact section -->
-<div class="container-fluid py-5">
+<div class="container-fluid pt-10 py-5">
     <div class="container-fluid contact_section"  id="contact-info">
       <div class="row">
         <div class="contact-info">
@@ -466,6 +310,13 @@
         </div>
 -->
         </div>
+        <div class="px-2">
+          <div class="map_container">
+            <div class="map">
+              <div id="mtc_map"><img src="/static/img/MAP-MTC-anosivavaka.jpg"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="flex">
@@ -473,9 +324,7 @@
 <form>
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 pb-12">
-      <h2 class="text-base/7 font-semibold text-gray-900">Profile</h2>
-      <p class="mt-1 text-sm/6 text-gray-600">This information will be displayed publicly so be careful what you share.</p>
-
+<h3 class="uppercase text-center pt-5 text-xl font-bold text-[#1f2e4e]">Vous avez des questions?</h3>
       <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
           <label for="firstname" class="block text-sm/6 font-medium text-gray-900">Prénom</label>
@@ -522,13 +371,7 @@
     </button>
   </div>
 </form>
-        <div class="col-lg-6 col-md-6 px-0">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"><img src="/static/img/MAP-MTC-anosivavaka.jpg"></div>
-            </div>
-          </div>
-        </div>
+<!-- map was here -->
       </div>
     </div>
     </div>
@@ -538,65 +381,4 @@
 
 
 {% block js %}
-<script>
-//Btn for Carousel
-    document.addEventListener('DOMContentLoaded', function () {
-      const carouselInner = document.querySelector('.carousel-inner');
-      const carouselItems = document.querySelectorAll('.carousel-item');
-      const prevButton = document.querySelector('.carousel-prev');
-      const nextButton = document.querySelector('.carousel-next');
-      let currentIndex = 0;
-
-      function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-          item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
-        });
-      }
-
-      prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
-        updateCarousel();
-      });
-
-      nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-      });
-
-      updateCarousel();
-    });
-</script>
-<script>
-// indicators
-
-const indicators = document.querySelectorAll('.indicator');
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', function() {
-      currentIndex = index;
-      updateCarousel();
-    });
-  });
-
-  function updateIndicators() {
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle('bg-gray-800', index === currentIndex);
-      indicator.classList.toggle('bg-gray-400', index !== currentIndex);
-    });
-  }
-
-  updateCarousel = function() {
-    items.forEach((item, index) => {
-      item.classList.remove('active');
-      item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
-    });
-    items[currentIndex].classList.add('active');
-    updateIndicators();
-  }
-</script>
-<!-- script>
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % carouselItems.length;
-  showSlide(currentIndex);
-}, 5000); // Change slide every 5 seconds
-</script -->
 {% endblock js %}
