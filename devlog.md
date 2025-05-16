@@ -28,5 +28,13 @@ Logged in as user_01J6S3N8VJWH9GG832EAPZRV4J
 - [] check db (local shuttle shared_db)
 - [] deploy
 
+---
+
+pg_dump -U postgres -d mtc -p 16182 -h localhost -f source_database.sql
+Password: 
+
+note -w to prevent password
+
+
 
 </main>

@@ -1,0 +1,3 @@
+psql -w -h sharedpg-rds.shuttle.dev -p 5432 -d db_LzpxWKu5vuz3 -U user_LzpxWKu5vuz3 -W -f destination_db.sql
+
+# yNi5rNxm88VhvHmGIpH6lNmENDfF3rsY
